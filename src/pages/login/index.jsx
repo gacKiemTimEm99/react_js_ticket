@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -15,7 +15,7 @@ import { useHistory } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { useFormik, FormikProvider, ErrorMessage, Field } from "formik";
-import { login } from "../../service/user";
+import { fetchLocalUser, login } from "../../service/user";
 import { useDispatch, useSelector } from "react-redux";
 import { createAction } from "../../redux/action/action";
 import { POST_USER_LOGIN } from "../../redux/action/type";
@@ -54,10 +54,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Login() {
+  const dispatch = useDispatch();
+
   const [state, setState] = useState(true);
   let history = useHistory();
   const ticket = useSelector((item) => item.ticketReducer.ticketBooking);
-  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const user = fetchLocalUser();
+    if (user) {
+      dispatch(createAction(POST_USER_LOGIN, user));
+    }
+  }, []);
+
   const formik = useFormik({
     initialValues: {
       userName: "",

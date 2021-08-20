@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "./box";
 import Header from "./header";
 import Navigation from "./navigation";
@@ -17,17 +17,20 @@ import ShowPlace from "./show/showPlace";
 import TicketBooking from "./show/ticketBooking";
 import User from "./show/user";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { fetchLocalUser } from "../../service/user";
+import { createAction } from "../../redux/action/action";
+import { POST_USER_LOGIN } from "../../redux/action/type";
 
 export default function AdminPage(props) {
-  let toggleMenu = () => {
-    let toggle = document.querySelector(".toggle");
-    let navigation = document.querySelector(".navigation");
-    let main = document.querySelector(".main");
-    toggle.classList.toggle("active");
-    navigation.classList.toggle("active");
-    main.classList.toggle("active");
-    // alert("ok nha");
-  };
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const user = fetchLocalUser();
+    if (user) {
+      dispatch(createAction(POST_USER_LOGIN, user));
+    }
+  }, []);
 
   return (
     <div
@@ -36,11 +39,7 @@ export default function AdminPage(props) {
     >
       <Navigation />
       <div className="main">
-        <Header
-          mytoggle={() => {
-            toggleMenu();
-          }}
-        />
+        <Header />
         <Box />
         <div className="detail admin">
           <Route exact path="/admin" component={withRouter(Shown)} />
@@ -60,8 +59,6 @@ export default function AdminPage(props) {
             component={withRouter(TicketBooking)}
           />
           <Route exact path="/admin/user" component={User} />
-
-          {/* <NewUser /> */}
         </div>
       </div>
     </div>

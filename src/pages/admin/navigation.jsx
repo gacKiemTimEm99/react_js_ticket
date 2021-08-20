@@ -14,7 +14,7 @@ export default function Navigation() {
               <i className="fa fa-address-card" aria-hidden="true" />
             </span>
             <span className="title">
-              <h2>thanh công cụ</h2>
+              <h5>thanh công cụ</h5>
             </span>
           </NavLink>
         </li>
