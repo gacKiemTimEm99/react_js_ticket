@@ -14,7 +14,7 @@ export default function ShownPlaceForm() {
       try {
         console.log("values", values);
         const data = await postShownPlace(values);
-        console.log("data", data);
+        alert("thêm thành công");
       } catch (error) {
         throw error;
       }

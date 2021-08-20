@@ -16,7 +16,7 @@ export default function UserForm() {
       try {
         console.log("values", values);
         const data = await postUser(values);
-        console.log("data", data);
+        alert("thêm thành công");
       } catch (error) {
         throw error;
       }

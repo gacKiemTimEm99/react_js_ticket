@@ -45,7 +45,7 @@ export default function ShownForm(props) {
       try {
         console.log("values", values);
         const data = await postShown(values);
-        console.log("data", data);
+        alert("thêm thành công");
       } catch (error) {
         throw error;
       }

@@ -24,9 +24,8 @@ export default function ShownTimeForm() {
     },
     onSubmit: async (values) => {
       try {
-        console.log("values", values);
         const data = await postShownTime(values);
-        console.log("data", data);
+        alert("thêm thành công");
       } catch (error) {
         throw error;
       }
