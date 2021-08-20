@@ -1,0 +1,15 @@
+.item {
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+}
+// .owl-carousel {
+//   .owl-stage-outer {
+//     background-color: red;
+//   }
+// }

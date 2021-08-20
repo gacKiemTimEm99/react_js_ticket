@@ -1,0 +1,98 @@
+.carousel {
+  margin-bottom: 100px;
+}
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+html {
+  line-height: 16px;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-image: url("https://www.takadada.com/wp-content/uploads/2019/07/hinh-anh-mat-trang-1.jpg");
+}
+
+@keyframes appearance {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes spindetail {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/*end key frames*/
+
+/* // .owl-nav {
+//   .owl_prev {
+//     position: absolute;
+//     top: 50%;
+//   }
+// } */
+.owl-carousel .owl-nav.disabled {
+  display: block !important;
+}
+.owl-carousel .owl-nav .owl-prev {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: -3%;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  top: 40%;
+  right: -2%;
+}
+
+/*css boostrap4*/
+
+.carousel-item img {
+  width: 100%;
+  height: 640px;
+}
+.carousel-indicators {
+  transform: translateY(80px);
+}
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px #32a8e3;
+  background-color: transparent;
+}
+.carousel-indicators li.active {
+  background-color: #32a8e3;
+}
+.carousel-control-prev img {
+  width: 40%;
+}
+.carousel-control-next img {
+  width: 40%;
+}
+.owl-carousel .owl-nav button img {
+  width: 60px;
+}
+.owl-carousel .owl-nav button:hover {
+  background: none !important;
+}
+// .owl-theme .owl-nav [class*="owl-"]:hover {
+//   background: none !important;
+// }
+
+/*css boostrap4*/
+/**/
+.owl-dots {
+  display: none;
+}

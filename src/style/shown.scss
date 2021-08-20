@@ -1,0 +1,44 @@
+.showntime {
+  padding: 50px 100px;
+  margin: 0 auto;
+  max-height: 680px;
+  background: rgba(0, 0, 0, 0.4);
+
+  button.ticket {
+    // background-image: url("https://previews.123rf.com/images/davidfranklinstudioworks/davidfranklinstudioworks1610/davidfranklinstudioworks161000042/65112593-two-blue-movie-or-raffle-tickets-isolated-on-a-white-background-.jpg");
+    // // background-size: auto;
+    // background-position-x: left;
+    // background-repeat: no-repeat;
+    // // padding: 20px 72px;
+    // /* background-color: #281a3a; */
+    // /* color: #fff; */
+    // border: solid 3px #32a8e3;
+
+    border: 1px solid #1a237e;
+    background: #32a8e3;
+    padding: 5px 30px 5px 10px;
+    color: #fff;
+    display: inline-block;
+    margin: 10px;
+    font-size: 22px;
+    box-shadow: 7px 7px #1a237e;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+  button:hover {
+    // font-size: 17px;
+    color: #1a237e;
+    font-weight: 500;
+    // border-color: #3c6f91;
+  }
+
+  // button.btn.mb-3 {
+  //   font-weight: 500;
+  //   background-size: contain;
+  //   background-color: white;
+  //   span {
+  //     display: block;
+  //     padding-left: 35px;
+  //   }
+  // }
+}

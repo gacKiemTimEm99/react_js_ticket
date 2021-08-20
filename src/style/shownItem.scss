@@ -1,0 +1,78 @@
+.item {
+  &__title {
+    color: white;
+    text-align: center;
+    h5 {
+      margin-top: 15px;
+      a {
+        display: block;
+        color: white;
+
+        font-weight: 400;
+      }
+    }
+  }
+}
+.item__detail {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  // height: 100%;
+  width: 250px;
+  height: 375px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  display: none;
+  animation: spindetail linear 0.3s;
+  button {
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    background-color: #382741;
+    // background-image: url("https://touchcinema.com/images/icons/icon-dat-ve.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    a {
+      margin-right: 25px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #32a8e3;
+    }
+  }
+  p {
+    font-weight: 400;
+    margin: 5px;
+    text-align: center;
+    color: white;
+    span {
+      color: #32a8e3;
+      font-weight: 500;
+    }
+  }
+}
+.item:hover {
+  .item__detail {
+    display: flex;
+  }
+  .item__title {
+    h5 {
+      a {
+        color: #32a8e3;
+      }
+    }
+    p {
+      color: #32a8e3;
+    }
+  }
+}
+// .item:hover {
+//     .item__detail {
+//       display: flex;
+//     }
+//   }
