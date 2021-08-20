@@ -17,11 +17,7 @@ export default function Header() {
         {/* <h1>ADMIN PAGE MANAGEMENT</h1> */}
       </div>
       <div className="user">
-        <img
-          width="100px"
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
-          alt
-        />
+        <img width="100px" src="https://i.redd.it/w2xgfjroo9e51.png" alt />
       </div>
     </div>
   );
